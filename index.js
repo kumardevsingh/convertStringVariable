@@ -18,7 +18,8 @@ function changeStringVariable(string1) {
         for (let i = 0; i < _tempStrArr.length; i++) {
             if (_tempStrArr[i] === _tempStrArr[i].toLocaleUpperCase()) {
                 if (i !== 0) {
-                    _tempReturnStr.push(`_${_tempStrArr[i]}`)
+                    //_tempReturnStr.push(`_${_tempStrArr[i]}`)
+                    _tempReturnStr.push(`_${_tempStrArr[i].charAt(0).toLocaleLowerCase()}`);
                 } else {
                     _tempReturnStr.push(`${_tempStrArr[i].toLowerCase()}`)
                 }
@@ -30,4 +31,4 @@ function changeStringVariable(string1) {
     return _tempReturnStr.join('');
 }
 
-console.log(changeStringVariable("aaaBeeCeeDee"));
+console.log(changeStringVariable("aaa_bee_cee_dee"));
